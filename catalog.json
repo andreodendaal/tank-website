@@ -60,7 +60,10 @@
   {
       "id": "escape_evasion_text3",
       "name": "Escape and Evasion - Part 3",
-      "content": "This is the third part of the story of escape and evasion during World War 2.",
+      "content": "This is the third part of the story of escape and evasion during World War 2."
+      
+      
+      ,
       "tags": ["ww2", "escape", "evasion", "part3"],
       "reference": []
   },
