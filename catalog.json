@@ -1,0 +1,114 @@
+[
+    {
+      "id": "about",
+      "name": "About",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "tags": ["about", "Tank Odendaal", "intro"],
+      "reference": ["https://example.com/about"]
+    },
+    {
+      "id": "childhood_text",
+      "name": "Childhood",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "tags": ["childhood", "harrismith", "1930"],
+      "reference": ["https://example.com/childhood"]
+    },
+    {
+      "id": "profile",
+      "name": "Profile Picture",
+      "content": "A portrait of H.O.M 'Tank' Odendaal taken in 1945.",
+      "tags": ["profile", "korea", "1951"],
+      "reference": ["../assets/images/profile.jpg"]     
+  },
+  {
+    "id": "joy_text",
+    "name": "Joy Odendaal",
+    "content": "Joy Odendaal (Bosman) was a prominent figure in her community and played a vital role in the family's history.",
+    "tags": ["family", "wife", "joy"],
+    "reference": []
+},
+{
+    "id": "joy_picture",
+    "name": "Joy Odendaal Picture",
+    "content": "",
+    "tags": ["family", "joy", "Joy Odendaal", "bosman"],
+    "reference": ["../assets/images/joy_odendaal.jpg"]
+}
+,
+{
+    "id": "horseback_picture",
+    "name": "Horseback Riding",
+    "content": "",
+    "tags": ["childhood", "harrismith", "1930"],
+    "reference": ["../assets/images/farm_life.jpg"]
+}, 
+
+  {
+      "id": "escape_evasion_text1",
+      "name": "Escape and Evasion - Part 1",
+      "content": "This is the first part of the story of escape and evasion during World War 2.",
+      "tags": ["ww2", "escape", "evasion", "part1"],
+      "reference": []
+  },
+  {
+      "id": "escape_evasion_text2",
+      "name": "Escape and Evasion - Part 2",
+      "content": "This is the second part of the story of escape and evasion during World War 2.",
+      "tags": ["ww2", "escape", "evasion", "part2"],
+      "reference": []
+  },
+  {
+      "id": "escape_evasion_text3",
+      "name": "Escape and Evasion - Part 3",
+      "content": "This is the third part of the story of escape and evasion during World War 2.",
+      "tags": ["ww2", "escape", "evasion", "part3"],
+      "reference": []
+  },
+  {
+      "id": "escape_evasion_image1",
+      "name": "Destroyed Plane",
+      "content": "",
+      "tags": ["Escape and evasion", "Mustang", "shot down"],
+      "reference": ["../assets/images/ww2_escape.jpg"]
+  },
+  {
+      "id": "escape_evasion_image2",
+      "name": "Mothers Cross",
+      "content": "",
+      "tags": ["ww2", "Mothers Cross", "Nazi"],
+      "reference": ["../assets/images/mothers_cross.jpg"]
+  },
+  {
+      "id": "monte_cassino_text",
+      "name": "Battle of Monte Cassino",
+      "content": "The Battle of Monte Cassino was a critical moment in the Allied campaign in Italy.",
+      "tags": ["ww2", "monte cassino", "battle"],
+      "reference": []
+  },
+  {
+      "id": "monte_cassino_image",
+      "name": "Monte Cassino Battlefield",
+      "content": "",
+      "tags": ["ww2", "monte cassino", "battlefield"],
+      "reference": ["../assets/images/ww2_monte_cassino.jpg"]
+  },
+  {
+      "id": "venice_harbor_text",
+      "name": "Venice Harbor Operations",
+      "content": "Venice Harbor was a strategic location during the later stages of World War 2.",
+      "tags": ["ww2", "venice", "harbor", "operations"],
+      "reference": []
+  },
+  {
+      "id": "venice_harbor_image",
+      "name": "Venice Harbor",
+      "content": "",
+      "tags": ["ww2", "venice", "harbor"],
+      "reference": ["../assets/images/ww2_venice.jpg"]
+  }
+
+
+
+    
+  ]
+  

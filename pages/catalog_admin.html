@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Catalog Administration</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-left">
+                <ul class="menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Catalog Administration</h1>
+
+        <!-- View Catalog Section -->
+        <div id="view-catalog-section">
+            <h2>View Catalog</h2>
+            <div id="catalog-display"></div>
+            <button id="viewCatalogBtn">View Catalog</button>
+        </div>
+
+        <!-- Add Entry Section -->
+        <h2>Add New Entry</h2>
+        <form id="add-entry-form">
+            <label for="entryId">ID:</label>
+            <input type="text" id="entryId" required>
+            <br>
+            <label for="entryName">Name:</label>
+            <input type="text" id="entryName" required>
+            <br>
+            <label for="entryContent">Content:</label>
+            <textarea id="entryContent" required></textarea>
+            <br>
+            <label for="entryTags">Tags (comma separated):</label>
+            <input type="text" id="entryTags" required>
+            <br>
+            <label for="entryReferences">References (comma separated URLs):</label>
+            <input type="text" id="entryReferences">
+            <br>
+            <button type="submit">Add Entry</button>
+        </form>
+
+
+        <h2>Edit Entry</h2>
+        <form id="edit-entry-form">
+            <div style="display: flex; align-items: center;">
+                <label for="editEntryId">ID:</label>
+                <input type="text" id="editEntryId" placeholder="Enter ID to search" required style="margin-right: 10px;">
+                <button type="button" id="searchEntry">Search by ID</button>
+            </div>
+            <br>
+            <label for="editEntryName">Name:</label>
+            <input type="text" id="editEntryName" required>
+            <br>
+            <label for="editEntryContent">Content:</label>
+            <textarea id="editEntryContent" required></textarea>
+            <br>
+            <label for="editEntryTags">Tags (comma separated):</label>
+            <input type="text" id="editEntryTags" required>
+            <br>
+            <label for="editEntryReferences">References (comma separated URLs):</label>
+            <input type="text" id="editEntryReferences">
+            <br>
+            <button type="submit">Save Changes</button>
+            <button type="button" id="deleteEntry">Delete Entry</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Contact Us</p>
+        <div class="social-media-icons">
+            <!-- Icons for Facebook, etc. -->
+        </div>
+        <p>&copy; 2024 Tank Odendaal. All rights reserved.</p>
+    </footer>
+
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>

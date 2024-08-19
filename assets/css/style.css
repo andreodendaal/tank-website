@@ -1,0 +1,245 @@
+/* Global Styles */
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.center-content {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1px; /* Reduced padding at the top */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+/* Main Content Area */
+main {
+    padding-left: 40px; /* Increase this value for more padding */
+    padding-right: 20px; /* Optional: balance the padding on the right */
+    padding-top: calc(3em + 60px); /* 3em for 3 lines, plus the height of the navbar */
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.profile-picture {
+    max-width: 400px;
+    margin-top: 20px;    
+    margin-bottom: 20px;
+}
+/* H1 Styles */
+h1 {
+    font-family: 'Special Elite', cursive;
+    color: #333;
+    font-size: 3.5em;  /* Increase font size for H1 */
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Page Specific Styling */
+.pad-page h1 {
+    margin-top: calc(2em); /* Adjust the margin-top to create space for the fixed navbar */
+}
+/* H2 Styles */
+h2 {
+    font-family: 'Special Elite', cursive;
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 2.5em;  /* Increase font size for H1 */
+    text-align: center;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 10px 0; /* Add some padding for better appearance */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark grey background */
+    padding: 10px;
+    font-family: 'Special Elite', cursive;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-item {
+    position: relative;
+    margin-right: 20px;
+}
+
+.menu-item > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+/* Search Bar Styles */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Special Elite', cursive;
+}
+
+.nav-right button {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Special Elite', cursive;
+}
+
+.nav-right button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #777; /* Lighter grey background */
+    padding: 20px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-media-icons {
+    margin-top: 10px;
+}
+
+footer .social-media-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+/* Style for the ID input and Search button */
+#edit-entry-form div {
+    display: flex;
+    align-items: center;
+}
+
+#editEntryId {
+    flex: 1;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#searchEntry {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#searchEntry:hover {
+    background-color: #555;
+}
+
+/* Other form elements */
+#edit-entry-form input[type="text"],
+#edit-entry-form textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+#edit-entry-form button[type="submit"],
+#edit-entry-form button[type="button"] {
+    margin-right: 10px;
+}
+
+
+/* Result Item Styles */
+.result-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.result-item h2 {
+    font-family: 'Special Elite', cursive;
+    margin-top: 0;
+    color: #333;
+}
+
+.result-item p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.result-item a {
+    font-family: 'Ubuntu', sans-serif;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+.result-item p:last-child {
+    font-size: 0.9em;
+    color: #777;
+}

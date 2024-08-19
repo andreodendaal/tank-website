@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Search Results</title>
+</head>
+<body>
+    <script src="../assets/js/navbar.js"></script>
+    <script>
+        createNavBar();
+    </script>
+
+    <main>
+        <h1>Search Results</h1>
+        <div id="results"></div>
+    </main>
+
+    <footer>
+        <p>Contact Us</p>
+        <div class="social-media-icons">
+            <!-- Icons for Facebook, etc. -->
+        </div>
+        <p>&copy; 2024 Tank Odendaal. All rights reserved.</p>
+    </footer>
+
+    <script src="../assets/js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const resultsContainer = document.getElementById('results');
+            const searchResults = JSON.parse(sessionStorage.getItem('searchResults'));
+
+            if (searchResults && searchResults.length > 0) {
+                searchResults.forEach(item => {
+                    const resultItem = document.createElement('div');
+                    resultItem.className = 'result-item';
+                    
+                    const title = document.createElement('h2');
+                    title.textContent = item.name;
+                    
+                    const content = document.createElement('p');
+                    content.textContent = item.content;
+
+                    // Add image rendering logic
+                    if (item.reference && item.reference.length > 0) {
+                        const reference = item.reference[0];
+                        
+                        if (reference.match(/\.(jpeg|jpg|gif|png)$/i)) {
+                            const image = document.createElement('img');
+                            image.src = reference;
+                            image.alt = item.name;
+                            image.style.maxWidth = '200px';
+                            image.style.display = 'block';
+                            image.style.marginTop = '10px';
+                            resultItem.appendChild(image);
+                        } else {
+                            const refText = document.createElement('p');
+                            refText.textContent = `Reference: ${reference}`;
+                            resultItem.appendChild(refText);
+                        }
+                    }
+                    
+                    const link = document.createElement('a');
+                    link.href = `${item.id}.html`;
+                    link.textContent = 'Read More';
+                    
+                    const tags = document.createElement('p');
+                    tags.textContent = `Tags: ${item.tags.join(', ')}`;
+                    
+                    resultItem.appendChild(title);
+                    resultItem.appendChild(content);
+                    resultItem.appendChild(link);
+                    resultItem.appendChild(tags);
+                    
+                    resultsContainer.appendChild(resultItem);
+                });
+            } else {
+                resultsContainer.textContent = 'No results found for your search.';
+            }
+        });
+    </script>
+</body>
+</html>

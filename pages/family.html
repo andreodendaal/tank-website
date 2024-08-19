@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Family</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <script src="../assets/js/navbar.js"></script>
+    <script>
+        createNavBar();
+    </script>
+
+    <!-- Main Content Area -->
+    <main class="center-content">
+        <h1>Family</h1>
+        <div id="family-content">
+            <!-- CMS content will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us</p>
+        <div class="social-media-icons">
+            <!-- Social media links here -->
+        </div>
+        <p>&copy; 2024 Tank Odendaal. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const familyContent = document.getElementById('family-content');
+
+            // Fetch catalog data
+            fetch('../catalog.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Load the header (from name field in joy_text)
+                    const joyTextEntry = data.find(item => item.id === 'joy_text');
+                    if (joyTextEntry) {
+                        const header = document.createElement('h2');
+                        header.id = joyTextEntry.id;  // Set the ID to allow in-page linking
+                        header.textContent = joyTextEntry.name;
+                        familyContent.appendChild(header);
+
+                        const paragraph = document.createElement('p');
+                        paragraph.textContent = joyTextEntry.content;
+                        familyContent.appendChild(paragraph);
+                    }
+
+                    // Load the image (joy_picture)
+                    const joyPictureEntry = data.find(item => item.id === 'joy_picture');
+                    if (joyPictureEntry && joyPictureEntry.reference.length > 0) {
+                        const image = document.createElement('img');
+                        image.src = joyPictureEntry.reference[0];
+                        image.alt = 'Joy Odendaal';
+                        image.style.maxWidth = '300px'; // Adjust the size as needed
+                        image.style.display = 'block';
+                        image.style.marginTop = '20px';
+                        image.style.marginLeft = 'auto';
+                        image.style.marginRight = 'auto';
+                        familyContent.appendChild(image);
+                    }
+                });
+        });
+    </script>
+</body>
+</html>
