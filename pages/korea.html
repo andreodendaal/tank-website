@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Childhood</title>
+</head>
+<body class="pad-page">
+    <!-- Navigation Bar -->
+    <script src="../assets/js/navbar.js"></script>
+    <script>
+        createNavBar();
+    </script>
+
+    <!-- Main Content Area -->
+    <main class="center-content">
+        <h1>Korea</h1>
+        
+        <div id="korea-content">
+            <!-- CMS content will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us</p>
+        <div class="social-media-icons">
+            <!-- Social media links here -->
+        </div>
+        <p>&copy; 2024 Tank Odendaal. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const childhoodContent = document.getElementById('korea-content');
+
+            // Fetch catalog data
+            fetch('../catalog.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Load the picture (mustang takeoff)
+                    const mustang1PictureEntry = data.find(item => item.id === 'korea_mustang_image1');
+                    if (mustang1PictureEntry && mustang1PictureEntry.reference.length > 0) {
+                        const image = document.createElement('img');
+                        image.src = mustang1PictureEntry.reference[0];
+                        image.alt = 'Mustang takeoff';
+                        image.style.maxWidth = '700px'; // Adjust the size as needed
+                        image.style.display = 'block';
+                        image.style.marginTop = '20px';
+                        image.style.marginLeft = 'auto';
+                        image.style.marginRight = 'auto';
+                        childhoodContent.appendChild(image);
+                    }
+
+                    // Load the paragraph text (childhood_text)
+                    const korea1TextEntry = data.find(item => item.id === 'korea1_text');
+                    if (korea1TextEntry) {
+                        const paragraph = document.createElement('p');
+                        paragraph.textContent = korea1TextEntry.content;
+                        childhoodContent.appendChild(paragraph);
+                    }
+
+                    const medalPictureEntry = data.find(item => item.id === 'korea_medal_image');
+                    if (medalPictureEntry && medalPictureEntry.reference.length > 0) {
+                        const image = document.createElement('img');
+                        image.src = medalPictureEntry.reference[0];
+                        image.alt = 'Recieving DFC';
+                        image.style.maxWidth = '500px'; // Adjust the size as needed
+                        image.style.display = 'block';
+                        image.style.marginTop = '20px';
+                        image.style.marginLeft = 'auto';
+                        image.style.marginRight = 'auto';
+                        childhoodContent.appendChild(image);
+                    }
+                });
+        });
+    </script>
+</body>
+</html>

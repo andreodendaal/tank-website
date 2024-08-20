@@ -12,6 +12,7 @@ function createNavBar() {
                             <li><a href="ww2.html#venice_harbor">Venice Harbor</a></li>
                         </ul>
                     </li>
+                    <li class="menu-item"><a href="korea.html">Korea</a></li>
                     <li class="menu-item"><a href="personal_life.html">Personal Life</a>
                         <ul class="submenu">
                             <li><a href="#">Sport</a></li>
